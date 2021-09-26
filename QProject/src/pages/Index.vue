@@ -18,7 +18,7 @@
         @mouseleave="autoplay = true"
         height="300px"
         class="text-white shadow-1 rounded-borders q-mt-sm"
-        style="background-color: #31CCEC;">
+        style="background-color: #1d76af;">
 
 
 
