@@ -1,4 +1,6 @@
 <template>
+
+
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
@@ -50,7 +52,7 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
+    title: 'Docsssss',
     caption: 'quasar.dev',
     icon: 'school',
     link: 'https://quasar.dev'
