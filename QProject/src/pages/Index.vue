@@ -1,5 +1,5 @@
 <template>
-
+  
   <video v-on:ended="visible = !visible" autoplay muted class="video">
 
     <source src="test.mp4"
@@ -110,13 +110,13 @@ methods: { startPage:function() {
         position: absolute;
         z-index: -1;
         height: 100%;
-        width: 100%;
+        width: 120%;
 }
 </style>
 
 <style scoped>
 .fade-enter-active {
-  transition: all 0.3s ease-out;
+  transition: all 1s ease-out;
 }
 
 .fade-leave-active {
