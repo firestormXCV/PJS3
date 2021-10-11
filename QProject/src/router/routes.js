@@ -9,7 +9,6 @@ const routes = [
         path: 'municipalite', component: () => import('pages/municipalite.vue')
       }
     ]
-    
   },
 
   
