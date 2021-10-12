@@ -1,16 +1,10 @@
 <template>
-  
   <video v-on:ended="visible = !visible" autoplay muted class="video">
-
-    <source src="test.mp4"
-            type="video/webm">
-
     <source src="test.mp4"
             type="video/mp4">
 
     Sorry, your browser doesn't support embedded videos.
   </video>
-
   <transition name="fade">
     <div v-if="visible" > 
 
@@ -179,6 +173,13 @@
         </q-slide-transition>
       </q-card>
     </div>
+    <div class="q-pa-md row items-start q-gutter-md">
+       <q-card class="my-cardd">
+         <q-card-section>
+          {{ lorem }}
+         </q-card-section>
+       </q-card>
+    </div>
     </div>
   </transition>
 
@@ -216,19 +217,12 @@ methods: { startPage:function() {
   carrousel
   }
 }
-
-
 }
-
-
-
 </script>
 
 <style>
 .video {
         position: absolute;
-        z-index: -1;
-        height: 100%;
         width: 100%;
 }
 </style>
@@ -253,4 +247,8 @@ methods: { startPage:function() {
 .my-card
   width: 100%
   max-width: 350px
+
+.my-cardd
+  width: 100%
+  
 </style>

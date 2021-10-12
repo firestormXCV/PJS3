@@ -43,6 +43,9 @@
     <q-page-container class="row justify-center">
 
       <router-view class="col-10" />
+      <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
+            <q-btn fab icon="keyboard_arrow_up" color="primary" />
+        </q-page-scroller>
     </q-page-container>
   </q-layout>
 </template>
