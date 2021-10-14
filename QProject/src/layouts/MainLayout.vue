@@ -98,7 +98,7 @@ const linksList = [
     title: 'Contacts',
     caption: 'Nous contacter',
     icon: 'connect_without_contact',
-    link: 'https://github.com/quasarframework'
+    link: '/#/contact'
   }
 ];
 
