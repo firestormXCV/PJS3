@@ -12,10 +12,11 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
-
-        <q-toolbar-title class="q-pa-sm">
-          <img src="logo.png" alt="logo"/>
-        </q-toolbar-title>
+        <router-link v-bind:to="'/'" tag='button'>
+          <q-toolbar-title class="q-pa-sm">     
+            <img src="logo.png" alt="logo"/>
+          </q-toolbar-title>
+        </router-link>
 
         <div>Le nom de notre société</div>
       </q-toolbar>
@@ -24,10 +25,12 @@
     <q-drawer
       v-model="leftDrawerOpen"
       bordered
+      
     >
       <q-list>
         <q-item-label
           header
+          
         >
           Essential Links
         </q-item-label>
@@ -36,6 +39,7 @@
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
+          
         />
       </q-list>
     </q-drawer>
@@ -45,7 +49,7 @@
       <router-view class="col-10" />
       <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
             <q-btn fab icon="keyboard_arrow_up" color="primary" />
-        </q-page-scroller>
+      </q-page-scroller>
     </q-page-container>
   </q-layout>
 </template>
@@ -55,46 +59,46 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docsssss',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
+    title: 'Vos Démarches',
+    caption: 'Vos démarches administratives',
+    icon: 'assignment_turned_in',
     link: 'https://github.com/quasarframework'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    title: 'Municipalité',
+    caption: 'Toutes l\'information sur la municpalité et ses actualités',
+    icon: 'apartment',
+    link: '/#/municipalite'
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    title: 'Services Municipaux',
+    caption: 'Les services municpaux de la ville',
+    icon: '',
+    link: 'pages/municipalite.vue'
   },
   {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    title: 'Activités et Découvertes',
+    caption: 'Les activités, événements et choses a découvrir sur l\'île',
+    icon: '',
+    link: 'https://github.com/quasarframework'
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
+    title: 'Actualités  ',
+    caption: 'Les News',
+    icon: '',
+    link: 'https://github.com/quasarframework'
   },
   {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    title: 'Météo',
+    caption: 'La météo de l\'île',
+    icon: 'wb_sunny',
+    link: 'https://github.com/quasarframework'
+  },
+  {
+    title: 'Contacts',
+    caption: 'Nous contacter',
+    icon: 'connect_without_contact',
+    link: 'https://github.com/quasarframework'
   }
 ];
 
