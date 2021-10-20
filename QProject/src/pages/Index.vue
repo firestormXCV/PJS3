@@ -1,15 +1,19 @@
 <template>
-  <video v-on:ended="visible = !visible" autoplay muted class="video">
+  <video v-if="!visible"  v-on:ended="visible = !visible" autoplay muted class="video">
     <source src="test.mp4"
             type="video/mp4">
 
     Sorry, your browser doesn't support embedded videos.
   </video>
-  <transition name="fade">
+
+  <div v-if="visible" class="video">
+    <q-parallax src="acc-pic.jpg"></q-parallax>
+  </div>
+
+  <transition name="fade" style="z-index: 99">
     <div v-if="visible" > 
 
       <q-carousel
-         
           id="carrousel"
           ref="carrousel"
           v-model="slide"
@@ -80,13 +84,13 @@
             round
             flat
             dense
-            :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-            @click="expanded = !expanded"
+            :icon="expanded1 ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+            @click="expanded1 = !expanded1"
           />
         </q-card-actions>
 
         <q-slide-transition>
-          <div v-show="expanded">
+          <div v-show="expanded1">
             <q-separator />
             <q-card-section class="text-subitle2">
               {{ lorem }}
@@ -119,13 +123,13 @@
             round
             flat
             dense
-            :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-            @click="expanded = !expanded"
+            :icon="expanded2 ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+            @click="expanded2 = !expanded2"
           />
         </q-card-actions>
 
         <q-slide-transition>
-          <div v-show="expanded">
+          <div v-show="expanded2">
             <q-separator />
             <q-card-section class="text-subitle2">
               {{ lorem }}
@@ -158,13 +162,13 @@
             round
             flat
             dense
-            :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-            @click="expanded = !expanded"
+            :icon="expanded3 ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+            @click="expanded3 = !expanded3"
           />
         </q-card-actions>
 
         <q-slide-transition>
-          <div v-show="expanded">
+          <div v-show="expanded3">
             <q-separator />
             <q-card-section class="text-subitle2">
               {{ lorem }}
@@ -173,7 +177,8 @@
         </q-slide-transition>
       </q-card>
     </div>
-    <div class="q-pa-md row items-start q-gutter-md">
+
+    <div class="q-pa-md row items-start q-gutter-md" >
        <q-card class="my-cardd">
          <q-card-section>
           {{ lorem }}
@@ -181,9 +186,12 @@
        </q-card>
     </div>
     </div>
+    
   </transition>
-
  
+  <div v-if="visible" class="bg-red" style="bottom: 0; position: absolute; width: 100%">
+      BONJOUR
+    </div>
 
 </template>
 
@@ -202,7 +210,9 @@ onMounted(() => {
 
 
     return {
-      expanded: ref(false),
+      expanded1: ref(false),
+      expanded2: ref(false),
+      expanded3: ref(false),
       visible: ref(false),
       slide: ref('style'),
       autoplay: ref(true),
@@ -219,15 +229,12 @@ methods: { startPage:function() {
 }
 }
 </script>
-
-<style>
+<style lang="scss">
 .video {
-        position: absolute;
-        width: 100%;
+  position: absolute;
+  width: 100%;
 }
-</style>
 
-<style scoped>
 .fade-enter-active {
   transition: all 1s ease-out;
 }
@@ -241,14 +248,13 @@ methods: { startPage:function() {
   transform: translateY(100px);
   opacity: 0;
 }
-</style>
 
-<style lang="sass" scoped>
-.my-card
-  width: 100%
-  max-width: 350px
+.my-card {
+  width: 100%;
+  max-width: 350px;
+}
 
-.my-cardd
-  width: 100%
-  
+.my-cardd {
+  width: 100%;
+  }
 </style>

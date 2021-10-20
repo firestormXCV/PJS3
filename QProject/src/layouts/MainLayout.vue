@@ -12,22 +12,25 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
+        
         <router-link v-bind:to="'/'" tag='button'>
+
           <q-toolbar-title class="q-pa-sm">     
             <img src="logo.png" alt="logo"/>
           </q-toolbar-title>
         </router-link>
-
-        <div>Le nom de notre société</div>
+        <q-space/>
+        <div class="absolute_right">by 4ZEM</div>
       </q-toolbar>
     </q-header>
 
     <q-drawer
       v-model="leftDrawerOpen"
       bordered
-      
+     class="bg_brehat_green"
+     
     >
-      <q-list>
+      <q-list >
         <q-item-label
           header
           
@@ -45,7 +48,6 @@
     </q-drawer>
 
     <q-page-container class="row justify-center">
-
       <router-view class="col-10" />
       <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
             <q-btn fab icon="keyboard_arrow_up" color="primary" />
@@ -56,7 +58,6 @@
 
 <script>
 import EssentialLink from 'components/EssentialLink.vue'
-
 const linksList = [
   {
     title: 'Vos Démarches',
@@ -108,7 +109,7 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
   setup () {
@@ -124,3 +125,12 @@ export default defineComponent({
   }
 })
 </script>
+
+<style >
+
+.bg_brehat_green {
+  background: #93bc3586;
+  border-block: solid;
+}
+
+</style>
