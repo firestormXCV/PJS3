@@ -8,13 +8,7 @@
             <h1 class="text-white">Basic</h1>
             </q-parallax>
         </div>
-    </div>
-      <video v-on:ended="visible = !visible" autoplay muted class="video">
-    <source src="test.mp4"
-            type="video/mp4">
-
-    Sorry, your browser doesn't support embedded videos.
-  </video>
+    </div>  
 
 
   <div class="q-pa-md" style="max-width: 400px">

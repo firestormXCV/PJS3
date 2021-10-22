@@ -5,10 +5,16 @@
 
     Sorry, your browser doesn't support embedded videos.
   </video>
-
-  <div v-if="visible" class="video">
-    <q-parallax src="acc-pic.jpg"></q-parallax>
-  </div>
+  <transition name="fade" class="absolute-top">
+    <div v-if="visible" class="video">
+      <q-parallax style="transform: translate3d(0%, -200px, 0px);" :height="800" :speed="5">
+        <template v-slot:media>
+          <img src="acc-pic.jpg" alt="Pic-ile">
+        </template>
+      </q-parallax>
+    </div>
+  </transition>
+  
 
   <transition name="fade" style="z-index: 99">
     <div v-if="visible" > 
@@ -189,9 +195,29 @@
     
   </transition>
  
-  <div v-if="visible" class="bg-red" style="bottom: 0; position: absolute; width: 100%">
-      BONJOUR
+
+
+  <div v-if="visible" style="bottom: 0; position: absolute; width: 100%">
+        
+ 
+
+      <div v-if="visible" class="video">
+        <q-toolbar class="bg_footer_green" >
+          <q-toolbar-title>Footer</q-toolbar-title>
+        </q-toolbar>
+      <q-parallax :height="612" :speed="5">
+        
+        <template v-slot:media>
+          <img src="foot-pic.jpg" alt="Pic-ile">
+        </template>
+      </q-parallax>
+              <q-toolbar class="bg_footer_green" >
+          <q-toolbar-title>Footer</q-toolbar-title>
+        </q-toolbar>
     </div>
+    </div>
+
+
 
 </template>
 
@@ -257,4 +283,9 @@ methods: { startPage:function() {
 .my-cardd {
   width: 100%;
   }
+
+.bg_footer_green {
+  background: #93bc3586;
+}
+
 </style>
