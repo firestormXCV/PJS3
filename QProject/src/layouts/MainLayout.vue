@@ -16,7 +16,8 @@
         <router-link v-bind:to="'/'" tag='button'>
 
           <q-toolbar-title class="q-pa-sm">     
-            <img src="logo.png" alt="logo"/>
+            <img class="gt-sm" src="logo.png" alt="logo"/>
+            <img class="lt-md" src="logo-mini.png" alt="logo"/>
           </q-toolbar-title>
         </router-link>
         <q-space/>
@@ -47,12 +48,17 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container class="row justify-center">
+    <q-page-container class="row justify-center " >
       <router-view class="col-10" />
-      <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
+
+    </q-page-container>
+
+      <q-page-scroller  position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
             <q-btn fab icon="keyboard_arrow_up" color="primary" />
       </q-page-scroller>
-    </q-page-container>
+
+
+
   </q-layout>
 </template>
 

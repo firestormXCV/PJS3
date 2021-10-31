@@ -39,7 +39,7 @@
           class="text-white shadow-1 rounded-borders q-mt-md"
           style="background-color: #1d76af;">
 
-          <q-carousel-slide name="style" class="column no-wrap flex-center">
+          <q-carousel-slide name="style" img-src="https://cdn.quasar.dev/img/mountains.jpg" class="column no-wrap flex-center">
             <q-icon name="style" size="56px" />
             <div class="q-mt-md text-center">
               {{ lorem }}
@@ -205,17 +205,28 @@
         <q-toolbar class="bg_footer_green" >
           <q-toolbar-title>Footer</q-toolbar-title>
         </q-toolbar>
-      <q-parallax :height="612" :speed="5">
+
+        <q-parallax class="gt-sm" :height="612" :speed="5">
         
-        <template v-slot:media>
-          <img src="foot-pic.jpg" alt="Pic-ile">
-        </template>
-      </q-parallax>
-              <q-toolbar class="bg_footer_green" >
+          <template v-slot:media>
+            <img src="foot-pic.jpg" alt="Pic-ile">
+          </template>
+
+        </q-parallax>
+
+        <q-parallax class="lt-md" :height="400" :speed="1">
+        
+          <template v-slot:media>
+            <img src="foot-pic.jpg" alt="Pic-ile">
+          </template>
+
+        </q-parallax>
+
+        <q-toolbar class="bg_footer_green" >
           <q-toolbar-title>Footer</q-toolbar-title>
         </q-toolbar>
     </div>
-    </div>
+  </div>
 
 
 
