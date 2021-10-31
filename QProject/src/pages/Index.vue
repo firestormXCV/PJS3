@@ -8,6 +8,7 @@
   <transition name="fade" class="absolute-top">
     <div v-if="visible" class="video">
       <q-parallax style="transform: translate3d(0%, -200px, 0px);" :height="800" :speed="5">
+<<<<<<< Updated upstream
         <template v-slot:media>
           <img src="acc-pic.jpg" alt="Pic-ile">
         </template>
@@ -16,6 +17,15 @@
   </transition>
   
 
+=======
+       
+      </q-parallax>
+    </div>
+  </transition>
+  <br>
+  <br>
+  
+>>>>>>> Stashed changes
   <transition name="fade" style="z-index: 99">
     <div v-if="visible" > 
 
@@ -28,6 +38,10 @@
           swipeable
           animated
           control-color="white"
+<<<<<<< Updated upstream
+=======
+          background-color="$warning"
+>>>>>>> Stashed changes
           navigation
           padding
           arrows
@@ -35,6 +49,7 @@
           :autoplay="autoplay"
           @mouseenter="autoplay = false"
           @mouseleave="autoplay = true"
+<<<<<<< Updated upstream
           height="500px"
           class="text-white shadow-1 rounded-borders q-mt-md"
           style="background-color: #1d76af;">
@@ -43,6 +58,16 @@
             <q-icon name="style" size="56px" />
             <div class="q-mt-md text-center">
               {{ lorem }}
+=======
+          height="600px"
+          class="text-white shadow-1 rounded-borders q-mt-md"
+          style="background-color: #f2f7f4;">
+
+          <q-carousel-slide name="style" class="column no-wrap flex-center" img-src="halloween.jpg">
+            <q-icon name="style" size="66px" />
+            <div class="q-mt-md text-center">
+              {{ text }}
+>>>>>>> Stashed changes
             </div>
           </q-carousel-slide>
           <q-carousel-slide name="tv" class="column no-wrap flex-center">
@@ -73,9 +98,15 @@
 
         <q-card-section>
           <div class="text-overline text-orange-9">Overline</div>
+<<<<<<< Updated upstream
           <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
           <div class="text-caption text-grey">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+=======
+          <div class="text-h5 q-mt-sm q-mb-xs">Office de Tourisme</div>
+          <div class="text-caption text-grey">
+            L’Office de Tourisme de l’Île de Bréhat est un point d’information utile aux touristes se rendant sur le territoire autour de Île-de-Bréhat (Côtes-d’Armor, Bretagne). Il permet entre autres de faciliter le séjour touristique des visiteurs qui se rendent dans la région.
+>>>>>>> Stashed changes
           </div>
         </q-card-section>
 
@@ -107,14 +138,24 @@
 
       <q-card class="my-card" flat bordered>
         <q-img
+<<<<<<< Updated upstream
           src="https://cdn.quasar.dev/img/parallax2.jpg"
+=======
+          src="https://www.letelegramme.fr/ar/imgproxy.php/images/2019/09/10/l-ancien-capitaine-de-corvette-victor-le-gonidec-reposait_4793757.jpg?article=20190910-1012379678&aaaammjj=20190910"
+>>>>>>> Stashed changes
         />
 
         <q-card-section>
           <div class="text-overline text-orange-9">Overline</div>
+<<<<<<< Updated upstream
           <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
           <div class="text-caption text-grey">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+=======
+          <div class="text-h5 q-mt-sm q-mb-xs">Météo</div>
+          <div class="text-caption text-grey">
+            Consultez les prévisions météo pour la semaine en cliquant sur le fanion planté sur Bréhat.
+>>>>>>> Stashed changes
           </div>
         </q-card-section>
 
@@ -151,9 +192,15 @@
 
         <q-card-section>
           <div class="text-overline text-orange-9">Overline</div>
+<<<<<<< Updated upstream
           <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
           <div class="text-caption text-grey">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+=======
+          <div class="text-h5 q-mt-sm q-mb-xs">Bréhat Infos</div>
+          <div class="text-caption text-grey">
+            Bulletin municipal de la commune de l’Île-de-Bréhat. Publication trimestrielle. Vous y découvrirez des articles sur les projets en cours où à venir, sur la vie quotidienne et l’actualité.
+>>>>>>> Stashed changes
           </div>
         </q-card-section>
 
@@ -187,7 +234,11 @@
     <div class="q-pa-md row items-start q-gutter-md" >
        <q-card class="my-cardd">
          <q-card-section>
+<<<<<<< Updated upstream
           {{ lorem }}
+=======
+          {{ text }}
+>>>>>>> Stashed changes
          </q-card-section>
        </q-card>
     </div>
@@ -205,6 +256,7 @@
         <q-toolbar class="bg_footer_green" >
           <q-toolbar-title>Footer</q-toolbar-title>
         </q-toolbar>
+<<<<<<< Updated upstream
 
         <q-parallax class="gt-sm" :height="612" :speed="5">
         
@@ -227,6 +279,19 @@
         </q-toolbar>
     </div>
   </div>
+=======
+      <q-parallax :height="612" :speed="5">
+        
+        <template v-slot:media>
+          <img src="foot-pic.jpg" alt="Pic-ile">
+        </template>
+      </q-parallax>
+              <q-toolbar class="bg_footer_green" >
+          <q-toolbar-title>Footer</q-toolbar-title>
+        </q-toolbar>
+    </div>
+    </div>
+>>>>>>> Stashed changes
 
 
 
@@ -253,7 +318,12 @@ onMounted(() => {
       visible: ref(false),
       slide: ref('style'),
       autoplay: ref(true),
+<<<<<<< Updated upstream
       lorem: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.'
+=======
+      lorem: 'Toute l’information pratique sur l’administration de la commune, les démarches administratives, les services, la vie quotidienne insulaire, les loisirs et le tourisme.',
+      text: 'kjnkjkguyyuyToute l’information pratique sur l’administration de la commune, les démarches administratives, les services, la vie quotidienne insulaire, les loisirs et le tourisme.'
+>>>>>>> Stashed changes
     }
   }
 ,
@@ -287,7 +357,11 @@ methods: { startPage:function() {
 }
 
 .my-card {
+<<<<<<< Updated upstream
   width: 100%;
+=======
+  width: 200%;
+>>>>>>> Stashed changes
   max-width: 350px;
 }
 
